@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <p>A site for all of the Willis Family Baseball Events.</p>
   </div>
 </template>
