@@ -10,7 +10,7 @@
         v-if="page != 1"
         >&#60; Prev
       </router-link>
-      <router-link
+      <!-- <router-link
         id="page"
         v-for="index in Math.ceil(totalEvents / 2)"
         :key="index"
@@ -18,7 +18,7 @@
         rel="jump"
       >
         {{ index }}
-      </router-link>
+      </router-link> -->
       <router-link
         id="page-next"
         :to="{ name: 'EventList', query: { page: page + 1 } }"
@@ -34,6 +34,7 @@
 // @ is an alias to /src
 import EventCard from '@/components/EventCard.vue'
 import EventService from '@/services/EventService.js'
+import store from '@/store'
 
 export default {
   name: 'EventList',
@@ -41,13 +42,22 @@ export default {
   components: {
     EventCard
   },
-  data() {
-    return {
-      events: null,
-      totalEvents: 0
-    }
-  },
+  // data() {
+  //   return {
+  //     events: null,
+  //     totalEvents: 0
+  //   }
+  // },
+  // created() {
+  //   this.$store.dispatch('fetchEvents')
+  // },
   beforeRouteEnter(routeTo, routeFrom, next) {
+    next(commit => {
+      console.log(routeTo)
+      commit.$store.dispatch('fetchEvents', { routeTo, next })
+    })
+    this.$store.dispatch('fetchEvents', routeTo, next)
+    this.$store.dispatch('fetchEvents')
     EventService.getEvents(2, parseInt(routeTo.query.page) || 1)
       .then(response => {
         next(comp => {
@@ -59,20 +69,26 @@ export default {
         next({ name: 'NetworkError' })
       })
   },
-  beforeRouteUpdate(routeTo) {
-    return EventService.getEvents(2, parseInt(routeTo.query.page) || 1)
-      .then(response => {
-        this.events = response.data
-        this.totalEvents = response.headers['x-total-count']
-      })
-      .catch(() => {
-        return { name: 'NetworkError' }
-      })
-  },
+  // beforeRouteUpdate(routeTo) {
+  //   return EventService.getEvents(2, parseInt(routeTo.query.page) || 1)
+  //     .then(response => {
+  //       this.events = response.data
+  //       this.totalEvents = response.headers['x-total-count']
+  //     })
+  //     .catch(() => {
+  //       return { name: 'NetworkError' }
+  //     })
+  // },
   computed: {
+    events() {
+      return this.$store.state.events
+    },
+    totalEvents() {
+      return this.$store.state.totalEvents
+    },
     hasNextPage() {
-      var totalPages = Math.ceil(this.totalEvents / 2)
-
+      var totalPages = Math.ceil(this.$store.state.totalEvents / 2)
+      console.log(totalPages)
       return this.page < totalPages
     }
   }

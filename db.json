@@ -1,34 +1,84 @@
 {
   "events": [
     {
-      "id": 123,
-      "category": "animal welfare",
-      "title": "Cat Adoption Day",
-      "description": "Find your new feline friend at this event.",
-      "location": "Meow Town",
-      "date": "January 28, 2022",
-      "time": "12:00",
-      "organizer": "Kat Laydee"
+      "id": 1001,
+      "category": "varsity",
+      "title": "Bountiful Varsity vs Woodscross",
+      "description": "Bountiful Varsity Baseball game vs Woodscross",
+      "location": "Bountiful",
+      "date": "October 6, 2022",
+      "time": "18:00",
+      "organizer": "Aaron Everett"
     },
     {
-      "id": 456,
-      "category": "food",
-      "title": "Community Gardening",
-      "description": "Join us as we tend to the community edible plants.",
-      "location": "Flora City",
-      "date": "March 14, 2022",
-      "time": "10:00",
-      "organizer": "Fern Pollin"
-    },
-    {
-      "id": 789,
-      "category": "sustainability",
-      "title": "Beach Cleanup",
-      "description": "Help pick up trash along the shore.",
-      "location": "Playa Del Carmen",
-      "date": "July 22, 2022",
+      "id": 1002,
+      "category": "comp",
+      "title": "Demons 9u vs Storm 10u",
+      "description": "Samuels's Demons 9u vs Storm 10u Rocky Mountain Baseball Game",
+      "location": "Farmington",
+      "date": "October 8, 2022",
       "time": "11:00",
-      "organizer": "Carey Wales"
+      "organizer": "Corey Romano"
+    },
+    {
+      "id": 1003,
+      "category": "comp",
+      "title": "Demons 9u vs Freeze 10u",
+      "description": "Samuels's Demons 9u vs Freeze 10u Rocky Mountain Baseball Game",
+      "location": "Farmington",
+      "date": "October 8, 2022",
+      "time": "13:00",
+      "organizer": "Corey Romano"
+    },
+    {
+      "id": 1004,
+      "category": "comp",
+      "title": "String 16u vs Phoenix 16u",
+      "description": "Mickey's Sting 16u vs Phoenix 16u Rocky Mountain Baseball Game",
+      "location": "Mueller Park",
+      "date": "October 8, 2022",
+      "time": "13:00",
+      "organizer": "Kory Sagers"
+    },
+    {
+      "id": 1005,
+      "category": "comp",
+      "title": "String 16u vs Lugnuts 16u",
+      "description": "Mickey's Sting 16u vs Lugnuts 16u Rocky Mountain Baseball Game",
+      "location": "Mueller Park",
+      "date": "October 8, 2022",
+      "time": "15:00",
+      "organizer": "Kory Sagers"
+    },
+    {
+      "id": "f6315993-c082-42cf-8cf0-ada564970218",
+      "category": "Ogden League",
+      "title": "Bountiful vs Woods Cross",
+      "description": "Bountiful Junior Varsity @ Woods Cross",
+      "location": "4th Street Park",
+      "date": "October 10th, 2022",
+      "time": "17:30",
+      "organizer": "Michael Willis"
+    },
+    {
+      "id": "c81ccecd-77dc-4bb7-a02a-b3524829252a",
+      "category": "Ogden League",
+      "title": "Bountifiul vs Trojans",
+      "description": "Bountiful Junior Varsity @ Trojans",
+      "location": "4th Street Park",
+      "date": "October 17th, 2022",
+      "time": "19:45",
+      "organizer": "Michael Willis"
+    },
+    {
+      "id": "35ce255d-c532-4dde-9cd2-319833f26237",
+      "category": "Farmington League",
+      "title": "DC Demons Red 9U vs DC Demons Gray 9U",
+      "description": "Away Game vs DC Demons Gray 9U",
+      "location": "Farmington City Regional Park",
+      "date": "October 10th, 2022",
+      "time": "16:45",
+      "organizer": "Michael Willis"
     }
   ]
 }

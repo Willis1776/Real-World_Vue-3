@@ -9,6 +9,7 @@ import NotFound from '@/views/NotFound.vue'
 import NetworkError from '@/views/NetworkError.vue'
 import NProgress from 'nprogress'
 import EventService from '@/services/EventService.js'
+import EventCreate from '@/views/event/Create.vue'
 import GStore from '@/store'
 
 const routes = [
@@ -78,6 +79,11 @@ const routes = [
     path: '/network-error',
     name: 'NetworkError',
     component: NetworkError
+  },
+  {
+    path: '/event/create',
+    name: 'EventCreate',
+    component: EventCreate
   }
 ]
 
